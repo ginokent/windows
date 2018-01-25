@@ -1,0 +1,6 @@
+reg add HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWithCmdexe /t REG_SZ /d "Open with cmd.exe(&C)"
+reg add HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWithCmdexe\command /t REG_SZ /d "cmd.exe"
+reg add HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWithPowershell /t REG_SZ /d "Open with Powershell(&S)"
+reg add HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWithPowershell\command /t REG_SZ /d "powershell.exe"
+reg add HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWithBash /t REG_SZ /d "Open with Bash(&B)"
+reg add HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWithBash\command /t REG_SZ /d "bash.exe"
