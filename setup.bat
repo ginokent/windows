@@ -14,8 +14,11 @@ rem #     2019-06-05 created.
 rem #     yyyy-MM-dd modified.
 rem # 
 
+echo install capslock2ctrl
 powershell.exe -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/capslock2ctrl.bat" -OutFile "$env:USERPROFILE\capslock2ctrl.bat""
 
+echo install sudo
 powershell.exe -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sudo.bat" -OutFile "$env:USERPROFILE\sudo.bat""
 
-explorer https://github.com/djeeno/windows
+echo open wsltty
+explorer https://github.com/mintty/wsltty/releases
