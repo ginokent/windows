@@ -7,7 +7,7 @@ rem # - Contents
 rem #     Setup tools
 rem # 
 rem # - Install
-rem #     powershell.exe -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/setup.bat" -OutFile "$env:USERPROFILE\setup.bat""
+rem #     powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/setup.bat" -OutFile "$env:USERPROFILE\setup.bat""
 rem #
 rem # - Revision
 rem #     2019-06-05 created.
@@ -15,13 +15,14 @@ rem #     yyyy-MM-dd modified.
 rem # 
 
 echo install capslock2ctrl
-powershell.exe -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/capslock2ctrl.bat" -OutFile "$env:USERPROFILE\capslock2ctrl.bat""
+powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/capslock2ctrl.bat" -OutFile "$env:USERPROFILE\capslock2ctrl.bat""
 
 echo install sudo
-powershell.exe -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sudo.bat" -OutFile "$env:USERPROFILE\sudo.bat""
+powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sudo.bat" -OutFile "$env:USERPROFILE\sudo.bat""
 
 echo install Windows Subsystem for Linux
-powershell.exe -Command "Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux"
+powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/install-wsl.bat" -OutFile "$env:USERPROFILE\install-wsl.bat""
+powershell -Command "Start-Process -Verb RUNAS install-wsl"
 
 echo open wsltty
 explorer https://github.com/mintty/wsltty/releases
