@@ -16,9 +16,13 @@ rem #
 
 echo install capslock2ctrl
 powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/capslock2ctrl.bat" -OutFile "$env:USERPROFILE\capslock2ctrl.bat""
+powershell -Command "Start-Process -Verb RUNAS capslock2ctrl"
 
 echo install sudo
 powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sudo.bat" -OutFile "$env:USERPROFILE\sudo.bat""
+
+echo install edit-hosts
+powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/edit-hosts.bat" -OutFile "$env:USERPROFILE\edit-hosts.bat""
 
 echo install Windows Subsystem for Linux
 powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/install-wsl.bat" -OutFile "$env:USERPROFILE\install-wsl.bat""
