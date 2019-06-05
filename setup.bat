@@ -20,5 +20,8 @@ powershell.exe -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.c
 echo install sudo
 powershell.exe -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sudo.bat" -OutFile "$env:USERPROFILE\sudo.bat""
 
+echo install Windows Subsystem for Linux
+powershell.exe -Command "Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux"
+
 echo open wsltty
 explorer https://github.com/mintty/wsltty/releases
