@@ -7,7 +7,7 @@ rem # - Contents
 rem #     Modify Registry for changing key map: CapsLock to Ctrl
 rem # 
 rem # - Install
-rem #     powershell.exe -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/capslock2ctrl.bat" -OutFile "$env:USERPROFILE\capslock2ctrl.bat""
+rem #     powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/capslock2ctrl.bat" -OutFile "$env:USERPROFILE\capslock2ctrl.bat""
 rem #
 rem # - Revision
 rem #     2018-05-11 created.
