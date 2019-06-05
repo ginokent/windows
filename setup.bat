@@ -16,7 +16,7 @@ rem #
 
 echo install capslock2ctrl
 powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/capslock2ctrl.bat" -OutFile "$env:USERPROFILE\capslock2ctrl.bat""
-powershell -Command "Start-Process -Verb RUNAS capslock2ctrl"
+powershell -Command "Start-Process -Verb RUNAS $env:USERPROFILE\capslock2ctrl.bat"
 
 echo install sudo
 powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sudo.bat" -OutFile "$env:USERPROFILE\sudo.bat""
@@ -26,13 +26,13 @@ powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/d
 
 echo install Windows Subsystem for Linux
 powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/install-wsl.bat" -OutFile "$env:USERPROFILE\install-wsl.bat""
-powershell -Command "Start-Process -Verb RUNAS install-wsl"
+powershell -Command "Start-Process -Verb RUNAS $env:USERPROFILE\install-wsl.bat"
 
 echo install sh
 powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sh.bat" -OutFile "$env:USERPROFILE\sh.bat""
 
-echo open wsltty
-explorer https://github.com/mintty/wsltty/releases
-
 echo open Git for Windows
 explorer https://gitforwindows.org/
+
+echo open wsltty
+explorer https://github.com/mintty/wsltty/releases
