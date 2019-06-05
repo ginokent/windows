@@ -1,7 +1,7 @@
 @echo off
 rem # 
 rem # - Name
-rem #     sudo.bat
+rem #     setup.bat
 rem # 
 rem # - Contents
 rem #     Setup tools
@@ -28,8 +28,11 @@ echo install Windows Subsystem for Linux
 powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/install-wsl.bat" -OutFile "$env:USERPROFILE\install-wsl.bat""
 powershell -Command "Start-Process -Verb RUNAS install-wsl"
 
+echo install sh
+powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sh.bat" -OutFile "$env:USERPROFILE\sh.bat""
+
 echo open wsltty
 explorer https://github.com/mintty/wsltty/releases
 
-echo install sh
-powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sh.bat" -OutFile "$env:USERPROFILE\sh.bat""
+echo open Git for Windows
+explorer https://gitforwindows.org/
