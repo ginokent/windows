@@ -32,4 +32,4 @@ echo open wsltty
 explorer https://github.com/mintty/wsltty/releases
 
 echo install sh
-powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sh.bat" -OutFile "$env:USERPROFILE\su.bat""
+powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sh.bat" -OutFile "$env:USERPROFILE\sh.bat""
