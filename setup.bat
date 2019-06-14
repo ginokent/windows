@@ -15,21 +15,20 @@ rem #     yyyy-MM-dd modified.
 rem # 
 
 echo install capslock2ctrl
-powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/capslock2ctrl.bat" -OutFile "$env:USERPROFILE\capslock2ctrl.bat""
-powershell -Command "Start-Process -Verb RUNAS $env:USERPROFILE\capslock2ctrl.bat"
+powershell "Invoke-WebRequest -Uri https://raw.githubusercontent.com/djeeno/windows/master/capslock2ctrl.bat -OutFile $env:USERPROFILE\capslock2ctrl.bat"
+powershell "Start-Process -Verb RUNAS $env:USERPROFILE\capslock2ctrl.bat"
 
 echo install sudo
-powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sudo.bat" -OutFile "$env:USERPROFILE\sudo.bat""
+powershell "Invoke-WebRequest -Uri https://raw.githubusercontent.com/djeeno/windows/master/sudo.bat -OutFile $env:USERPROFILE\sudo.bat"
 
 echo install edit-hosts
-powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/edit-hosts.bat" -OutFile "$env:USERPROFILE\edit-hosts.bat""
+powershell "Invoke-WebRequest -Uri https://raw.githubusercontent.com/djeeno/windows/master/edit-hosts.bat -OutFile $env:USERPROFILE\edit-hosts.bat"
 
 echo install Windows Subsystem for Linux
-powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/install-wsl.bat" -OutFile "$env:USERPROFILE\install-wsl.bat""
-powershell -Command "Start-Process -Verb RUNAS $env:USERPROFILE\install-wsl.bat"
+powershell "Invoke-WebRequest -Uri https://raw.githubusercontent.com/djeeno/windows/master/install-wsl.bat -OutFile $env:USERPROFILE\install-wsl.bat"
 
 echo install sh
-powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/sh.bat" -OutFile "$env:USERPROFILE\sh.bat""
+powershell "Invoke-WebRequest -Uri https://raw.githubusercontent.com/djeeno/windows/master/sh.bat -OutFile $env:USERPROFILE\sh.bat"
 
 echo open Git for Windows
 explorer https://gitforwindows.org/
