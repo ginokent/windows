@@ -7,7 +7,7 @@ rem # - Contents
 rem #     C:\Windows\System32\runas.exe w32tm /resync
 rem # 
 rem # - Install
-rem #     powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/timesync.bat" -OutFile "$env:USERPROFILE\timesync.bat""
+rem #     powershell -Command "Invoke-WebRequest -Uri https://raw.githubusercontent.com/djeeno/windows/master/timesync.bat -OutFile $env:USERPROFILE\timesync.bat"
 rem #
 rem # - Revision
 rem #     2019-05-30 created.
