@@ -7,7 +7,7 @@ rem # - Contents
 rem #     Setup tools
 rem # 
 rem # - Install
-rem #     powershell -Command "Invoke-WebRequest -Uri "https://raw.githubusercontent.com/djeeno/windows/master/setup.bat" -OutFile "$env:USERPROFILE\setup.bat""
+rem #     powershell -Command "Invoke-WebRequest -Uri https://raw.githubusercontent.com/djeeno/windows/master/setup.bat -OutFile $env:USERPROFILE\setup.bat"
 rem #
 rem # - Revision
 rem #     2019-06-05 created.
