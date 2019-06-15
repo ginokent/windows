@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# This script executes a command with the same file name as the executable file itself,
+# or a file name with ".exe" added after that.
+# It's just like BusyBox.
+
+command_name=$(basename "$0")
+
+if command -v "${command_name}.exe" >/dev/null; then
+  exec "${command_name}.exe" "$@"
+else
+  exec "${command_name}" "$@"
+fi
