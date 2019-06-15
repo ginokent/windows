@@ -15,4 +15,4 @@ rem #     2017-05-10 created.
 rem #     yyyy-MM-dd modified.
 rem # 
 
-start powershell -Command "Start-Process -Verb RUNAS rundll32.exe shell32.dll,`#61"
+start powershell "Start-Process -Verb RUNAS rundll32.exe shell32.dll,`#61"
