@@ -1,0 +1,6 @@
+{
+  "fixed-cidr-v6" : "2001:db8:1::/64",
+  "experimental" : false,
+  "debug" : true,
+  "ipv6" : true
+}
